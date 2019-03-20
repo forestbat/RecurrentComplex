@@ -10,6 +10,9 @@ import ivorius.ivtoolkit.tools.MCRegistry;
 import ivorius.ivtoolkit.tools.NBTCompoundObjectCapabilityStorage;
 import ivorius.reccomplex.biome.RCBiomeDictionary;
 import ivorius.reccomplex.block.*;
+import ivorius.reccomplex.block.legacy.BlockMazeGenerator;
+import ivorius.reccomplex.block.legacy.BlockSpawnCommand;
+import ivorius.reccomplex.block.legacy.BlockStructureGenerator;
 import ivorius.reccomplex.block.materials.MaterialNegativeSpace;
 import ivorius.reccomplex.block.materials.RCMaterials;
 import ivorius.reccomplex.capability.CapabilitySelection;
@@ -79,8 +82,7 @@ public class RCRegistryHandler
 
     public static void preInit(FMLPreInitializationEvent event, RecurrentComplex mod)
     {
-        if (!RecurrentComplex.isLite())
-        {
+        if (!RecurrentComplex.isLite()) {
             tabStructureTools = new CreativeTabs("structureTools")
             {
                 @Override
@@ -207,13 +209,11 @@ public class RCRegistryHandler
         block.setRegistryName(id);
         item.setRegistryName(id);
 
-        if (!RecurrentComplex.isLite())
-        {
+        if (!RecurrentComplex.isLite()) {
             ForgeRegistries.BLOCKS.register(block);
             ForgeRegistries.ITEMS.register(item);
         }
-        else
-        {
+        else {
             specialRegistry.register(block.getRegistryName(), block);
             specialRegistry.register(item.getRegistryName(), item);
         }
@@ -291,8 +291,9 @@ public class RCRegistryHandler
         transformerRegistry.registerType("natural", TransformerNatural.class, new TransformerNatural.Serializer(mcRegistry));
         transformerRegistry.registerType("naturalAir", TransformerNaturalAir.class, new TransformerNaturalAir.Serializer(mcRegistry));
         transformerRegistry.registerType("pillar", TransformerPillar.class, new TransformerPillar.Serializer(mcRegistry));
-        transformerRegistry.registerType("replaceAll", TransformerReplaceAll.class, new TransformerReplaceAll.Serializer(mcRegistry));
-        transformerRegistry.registerType("replace", TransformerReplace.class, new TransformerReplace.Serializer(mcRegistry));
+        TransformerReplace.Serializer replaceSerializer = new TransformerReplace.Serializer(mcRegistry);
+        transformerRegistry.registerType("replaceAll", TransformerReplace.class, replaceSerializer);
+        transformerRegistry.registerLegacy("replace", TransformerReplace.class, new TransformerReplace.NonUniformSerializer(replaceSerializer));
         transformerRegistry.registerType("ruins", TransformerRuins.class, new TransformerRuins.Serializer(mcRegistry));
         transformerRegistry.registerType("negativeSpace", TransformerNegativeSpace.class, new TransformerNegativeSpace.Serializer(mcRegistry));
         transformerRegistry.registerType("ensureBlocks", TransformerEnsureBlocks.class, new TransformerEnsureBlocks.Serializer(mcRegistry));
@@ -366,6 +367,8 @@ public class RCRegistryHandler
         network.registerMessage(PacketOpenGuiHandler.class, PacketOpenGui.class, 15, Side.SERVER);
         network.registerMessage(PacketInspectEntityHandler.class, PacketInspectEntity.class, 17, Side.SERVER);
         network.registerMessage(PacketWorldDataHandler.class, PacketWorldData.class, 20, Side.SERVER);
+
+        network.registerMessage(PacketSpawnTweaksHandler.class, PacketSpawnTweaks.class, 21, Side.SERVER);
     }
 
     protected static void registerClientPackets()
@@ -381,6 +384,8 @@ public class RCRegistryHandler
         network.registerMessage(PacketReopenGuiHandler.class, PacketReopenGui.class, 16, Side.CLIENT);
         network.registerMessage(PacketInspectEntityHandler.class, PacketInspectEntity.class, 18, Side.CLIENT);
         network.registerMessage(PacketWorldDataHandler.class, PacketWorldData.class, 19, Side.CLIENT);
+
+        network.registerMessage(PacketSpawnTweaksHandler.class, PacketSpawnTweaks.class, 22, Side.CLIENT);
     }
 
 }

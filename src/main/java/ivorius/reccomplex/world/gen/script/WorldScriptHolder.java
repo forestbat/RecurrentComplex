@@ -71,14 +71,21 @@ public class WorldScriptHolder implements WorldScript<NBTNone>
     @Override
     public void generate(StructureSpawnContext context, RunTransformer transformer, NBTNone instanceData, BlockPos pos)
     {
+        if (worldData == null) {
+            return;
+        }
+
         GenericStructure structure = new GenericStructure();
         structure.worldDataCompound = worldData.copy();
 
-        // TODO Pass the transformer of context
+        int[] strucSize = structure.size();
+        BlockPos strucCoord = context.transform.apply(origin, new int[]{1, 1, 1})
+                .subtract(context.transform.apply(BlockPos.ORIGIN, strucSize)).add(pos);
+
         new StructureGenerator<>(structure)
                 .asChild(context)
                 .transformer(transformer)
-                .lowerCoord(origin.add(pos))
+                .lowerCoord(strucCoord)
                 .generationPredicate(p -> !p.equals(pos))
                 .generate();
 

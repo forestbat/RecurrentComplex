@@ -19,7 +19,7 @@
             {
               "block": "minecraft:air",
               "metadata": 0,
-              "tileEntityInfo": ""
+              "tileEntity": "null"
             }
           ]
         }

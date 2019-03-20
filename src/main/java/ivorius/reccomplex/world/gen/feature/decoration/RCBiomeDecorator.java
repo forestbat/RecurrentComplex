@@ -156,9 +156,12 @@ public class RCBiomeDecorator
 
         for (int i = 0; i < rcAmount; i++)
         {
-            for (int t = 0; t < STRUCTURE_TRIES; t++)
-                if (generate(selector.selectOne(random, type, totalWeight), worldIn, chunkPos, random))
+            for (int t = 0; t < STRUCTURE_TRIES; t++) {
+                Pair<Structure<?>, VanillaDecorationGeneration> structurePair = selector.selectOne(random, type, totalWeight);
+
+                if (generate(structurePair, worldIn, chunkPos, random))
                     break;
+            }
         }
 
         return vanillaAmount - rcAmount;
@@ -167,17 +170,15 @@ public class RCBiomeDecorator
     public static boolean generate(Pair<Structure<?>, VanillaDecorationGeneration> generation, WorldServer worldIn, ChunkPos chunkPos, Random random)
     {
         long seed = random.nextLong();
-        BlockPos shift = generation.getRight().spawnShift;
 
         return new StructureGenerator<>(generation.getLeft()).generationInfo(generation.getRight()).world(worldIn)
                 .seed(seed).maturity(StructureSpawnContext.GenerateMaturity.SUGGEST)
                 .partially(true, chunkPos)
 //                .memorize(RCConfig.memorizeDecoration) // Always memorize for partial gen
                 .allowOverlaps(true)
-                .randomPosition(WorldGenStructures.randomSurfacePos(chunkPos, seed).add(shift.getX(), shift.getZ()),
-                        // TODO Remove shift because we now have a placer anyway
-                        shift(generation.getRight().placer(), shift.getY())).fromCenter(true)
-                .generate() != null;
+                .randomPosition(WorldGenStructures.randomSurfacePos(chunkPos, seed),
+                        generation.getRight().placer()).fromCenter(true)
+                .generate().succeeded();
     }
 
     protected static Placer shift(Placer placer, int y)

@@ -49,7 +49,7 @@ public class CommandSanity extends CommandExpecting
 
     public static Stream<World> dimensions(MinecraftServer server)
     {
-        return Stream.of(DimensionManager.getIDs()).map(server::getWorld);
+        return Stream.of(DimensionManager.getStaticDimensionIDs()).map(server::getWorld);
     }
 
     @Override
@@ -76,6 +76,10 @@ public class CommandSanity extends CommandExpecting
     {
         Parameters parameters = Parameters.of(args, expect()::declare);
         boolean sane = true;
+
+        if (RecurrentComplex.isLite()) {
+            commandSender.sendMessage(new TextComponentString("Recurrent Complex is in lightweight mode!"));
+        }
 
         if (StructureRegistry.INSTANCE.ids().isEmpty())
         {

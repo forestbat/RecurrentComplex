@@ -79,9 +79,9 @@ public class TransformerMulti extends Transformer<TransformerMulti.InstanceData>
         return transformer;
     }
 
-    public static TransformerMulti fuse(List<TransformerMulti> transformers)
+    public static TransformerMulti fuse(List<Transformer> transformers)
     {
-        TransformerMulti transformer = new TransformerMulti();
+        TransformerMulti transformer = new TransformerMulti("fused", "");
         transformers.forEach(t -> transformer.getTransformers().add(t));
         return transformer;
     }
@@ -91,7 +91,7 @@ public class TransformerMulti extends Transformer<TransformerMulti.InstanceData>
         return instanceData.pairedTransformers.isEmpty();
     }
 
-    public InstanceData fuseDatas(List<InstanceData> instanceDatas)
+    public InstanceData fuseDatas(List<NBTStorable> instanceDatas)
     {
         List<Transformer> transformers = getTransformers();
         InstanceData instanceData = new InstanceData();
