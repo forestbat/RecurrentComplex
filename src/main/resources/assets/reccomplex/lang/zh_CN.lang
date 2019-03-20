@@ -51,25 +51,25 @@ itemGroup.inventoryGenerators=战利品
 
 commands.rc.noEntityInfo=The sender doesn't handle structure info!
 commands.rc.noSelection=The sender doesn't handle selections!
-commands.rc.large.warn=The selection is very big! This might take a while.
+commands.rc.large.warn=选择范围太大了！需要花一些时间.
 commands.rc.large.error=The selection is too big! (And if it weren't, this command would probably take a few days to run!)
 
 commands.structure.notGeneric=Structure '%s' is not generic!
 commands.structure.notRegistered=No structure found by name '%s'!
 
-commands.strucGen.noPlace=The structure can't find anywhere suitable to spawn!
-commands.strucGen.canceled=The structure generation was canceled!
-commands.strucGen.noStructure=No structure registered by the name of '%s'
+commands.strucGen.noPlace=结构找不到合适的生成位置!
+commands.strucGen.canceled=结构生成被取消!
+commands.strucGen.noStructure=名为 '%s' 的结构没有被注册
 
-commands.strucImport.noStructure=No structure registered by the name of '%s'
+commands.strucImport.noStructure=名为'%s'的结构没有被注册
 
 commands.selectSet.get=Selection: %s
 commands.selectSet.size=Size: %s (%s blocks)
 
-commands.selectModify.noSelection=Player does not have a complete selection
-commands.selectModify.invalidMetadata=Metadata must be entered like '0,1,5', but was '%s'
+commands.selectModify.noSelection=玩家没有选择完全
+commands.selectModify.invalidMetadata=标签应该以 '0,1,5' 的形式输入, 但是你输入了 '%s'
 
-commands.strucReload.success=Reloaded all %s files.
+commands.strucReload.success=重载所有的 %s 文件
 
 commands.selectCopy.success=Copied (%s) to clipboard
 
@@ -225,32 +225,32 @@ reccomplex.structure.deleteOther.tooltip=Note: Structures in the %s<br>folder ta
 reccomplex.structure.generation.id=Generation ID
 reccomplex.structure.generation.id.tooltip=Identifier for the generation type.<br>Unique within the structure file.
 
-reccomplex.generationInfo.natural=Natural
-reccomplex.generationInfo.natural.tooltip=Randomized generation in any biome
-reccomplex.generationInfo.natural.category=Category
-reccomplex.generationInfo.natural.limitations=Limitations
-reccomplex.generationInfo.natural.limitation.context.world=Per World
-reccomplex.generationInfo.natural.limitation.context.dimension=Per Dimension
-reccomplex.generationInfo.natural.limitation.context.dimension.tooltip=Structure occurs x times at max, <br>per dimension.
-reccomplex.generationInfo.natural.limitation.context.x_chunks=Every X Chunks
+reccomplex.generationInfo.natural=自然
+reccomplex.generationInfo.natural.tooltip=在任何群系中随机生成
+reccomplex.generationInfo.natural.category=类别
+reccomplex.generationInfo.natural.limitations=限制
+reccomplex.generationInfo.natural.limitation.context.world=每个世界
+reccomplex.generationInfo.natural.limitation.context.dimension=每个维度
+reccomplex.generationInfo.natural.limitation.context.dimension.tooltip=结构在每个世界最多生成x次
+reccomplex.generationInfo.natural.limitation.context.x_chunks=每X个区块
 
-reccomplex.generationInfo.mazeComponent=Maze Component
-reccomplex.generationInfo.mazeComponent.mazeid=Maze ID
-reccomplex.generationInfo.mazeComponent.tooltip=A room in a maze.
-reccomplex.generationInfo.mazeComponent.title=In Maze: %s
-reccomplex.generationInfo.mazeComponent.rooms=Rooms
-reccomplex.generationInfo.mazeComponent.rooms.tooltip=Rooms that this component spans over.<br>Keep in mind these are scaled by<br>the maze's room size.
-reccomplex.generationInfo.mazeComponent.exits=Exits
-reccomplex.generationInfo.mazeComponent.exits.tooltip=Exits leading outside of this component.<br>Keep in mind these are scaled by<br>the maze's room size.
-reccomplex.generationInfo.mazeComponent.reachability=Reachability
-reccomplex.generationInfo.mazeComponent.position.x=Position (x)
-reccomplex.generationInfo.mazeComponent.position.x.tooltip=East/West Position of this exit.<br>Keep in mind this is scaled by<br>the maze's room size.
+reccomplex.generationInfo.mazeComponent=迷宫组成部分
+reccomplex.generationInfo.mazeComponent.mazeid=迷宫 ID
+reccomplex.generationInfo.mazeComponent.tooltip=迷宫中的一个房间
+reccomplex.generationInfo.mazeComponent.title=在 %s 迷宫：
+reccomplex.generationInfo.mazeComponent.rooms=房间
+reccomplex.generationInfo.mazeComponent.rooms.tooltip=这个组成部分跨越的房间.<br>注意这些是根据<br>迷宫的房间大小缩放的
+reccomplex.generationInfo.mazeComponent.exits=出口
+reccomplex.generationInfo.mazeComponent.exits.tooltip=这个组成部分所有的出口.<br>注意这些是根据<br>迷宫的房间大小缩放的.
+reccomplex.generationInfo.mazeComponent.reachability=可到达性
+reccomplex.generationInfo.mazeComponent.position.x=位置 (x)
+reccomplex.generationInfo.mazeComponent.position.x.tooltip=出口的东西走向位置.<br>注意这些是根据<br>迷宫的房间大小缩放的.
 reccomplex.generationInfo.mazeComponent.position.y=Position (y)
-reccomplex.generationInfo.mazeComponent.position.y.tooltip=Up/Down Position of this exit.<br>Keep in mind this is scaled by<br>the maze's room size.
+reccomplex.generationInfo.mazeComponent.position.y.tooltip=出口的上下走向位置.<br>注意这些是根据<br>迷宫的房间大小缩放的.
 reccomplex.generationInfo.mazeComponent.position.z=Position (z)
-reccomplex.generationInfo.mazeComponent.position.z.tooltip=South/North Position of this exit.<br>Keep in mind this is scaled by<br>the maze's room size.
-reccomplex.generationInfo.mazeComponent.path.invert=Invert
-reccomplex.generationInfo.mazeComponent.path.side=Side
+reccomplex.generationInfo.mazeComponent.position.z.tooltip=出口的南北走向位置.<br>注意这些是根据<br>迷宫的房间大小缩放的.
+reccomplex.generationInfo.mazeComponent.path.invert=反转
+reccomplex.generationInfo.mazeComponent.path.side=边缘
 
 reccomplex.generationInfo.static=Static
 reccomplex.generationInfo.static.summary.pattern=Every %s, %s blocks
