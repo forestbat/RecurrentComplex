@@ -7,40 +7,40 @@ item.artifactGenerationTag.name=手动生成标签
 item.bookGenerationTag.name=书生成标签
 item.recinspector.name=检查器
 
-tile.negativeSpace.name=Generic Space
-tile.negativeSpace.meta.0.name=Space (0 ~ Negative Space)
-tile.negativeSpace.meta.1.name=Space (1 ~ Natural Air)
-tile.negativeSpace.meta.2.name=Space (2)
-tile.negativeSpace.meta.3.name=Space (3)
-tile.negativeSpace.meta.4.name=Space (4)
-tile.negativeSpace.meta.5.name=Space (5)
-tile.negativeSpace.meta.6.name=Space (6)
-tile.negativeSpace.meta.7.name=Space (7)
-tile.negativeSpace.meta.8.name=Space (8)
-tile.negativeSpace.meta.9.name=Space (9)
-tile.negativeSpace.meta.10.name=Space (10)
-tile.negativeSpace.meta.11.name=Space (11)
-tile.negativeSpace.meta.12.name=Space (12)
-tile.negativeSpace.meta.13.name=Space (13)
-tile.negativeSpace.meta.14.name=Space (14)
-tile.negativeSpace.meta.15.name=Space (15)
-tile.naturalFloor.name=Generic Solid
-tile.naturalFloor.meta.0.name=Solid (0 ~ Natural Floor)
-tile.naturalFloor.meta.1.name=Solid (1 ~ Barrier)
-tile.naturalFloor.meta.2.name=Solid (2)
-tile.naturalFloor.meta.3.name=Solid (3)
-tile.naturalFloor.meta.4.name=Solid (4)
-tile.naturalFloor.meta.5.name=Solid (5)
-tile.naturalFloor.meta.6.name=Solid (6)
-tile.naturalFloor.meta.7.name=Solid (7)
-tile.naturalFloor.meta.8.name=Solid (8)
-tile.naturalFloor.meta.9.name=Solid (9)
-tile.naturalFloor.meta.10.name=Solid (10)
-tile.naturalFloor.meta.11.name=Solid (11)
-tile.naturalFloor.meta.12.name=Solid (12)
-tile.naturalFloor.meta.13.name=Solid (13)
-tile.naturalFloor.meta.14.name=Solid (14)
-tile.naturalFloor.meta.15.name=Solid (15)
+tile.negativeSpace.name=Generic 空间
+tile.negativeSpace.meta.0.name=空间 (0 ~ 消极生成空间)
+tile.negativeSpace.meta.1.name=空间 (1 ~ 正常空气)
+tile.negativeSpace.meta.2.name=空间 (2)
+tile.negativeSpace.meta.3.name=空间 (3)
+tile.negativeSpace.meta.4.name=空间 (4)
+tile.negativeSpace.meta.5.name=空间 (5)
+tile.negativeSpace.meta.6.name=空间 (6)
+tile.negativeSpace.meta.7.name=空间 (7)
+tile.negativeSpace.meta.8.name=空间 (8)
+tile.negativeSpace.meta.9.name=空间 (9)
+tile.negativeSpace.meta.10.name=空间 (10)
+tile.negativeSpace.meta.11.name=空间 (11)
+tile.negativeSpace.meta.12.name=空间 (12)
+tile.negativeSpace.meta.13.name=空间 (13)
+tile.negativeSpace.meta.14.name=空间 (14)
+tile.negativeSpace.meta.15.name=空间 (15)
+tile.naturalFloor.name=Generic 固体
+tile.naturalFloor.meta.0.name=固体 (0 ~ 正常地面)
+tile.naturalFloor.meta.1.name=固体 (1 ~ 屏障)
+tile.naturalFloor.meta.2.name=固体 (2)
+tile.naturalFloor.meta.3.name=固体 (3)
+tile.naturalFloor.meta.4.name=固体 (4)
+tile.naturalFloor.meta.5.name=固体 (5)
+tile.naturalFloor.meta.6.name=固体 (6)
+tile.naturalFloor.meta.7.name=固体 (7)
+tile.naturalFloor.meta.8.name=固体 (8)
+tile.naturalFloor.meta.9.name=固体 (9)
+tile.naturalFloor.meta.10.name=固体 (10)
+tile.naturalFloor.meta.11.name=固体 (11)
+tile.naturalFloor.meta.12.name=固体 (12)
+tile.naturalFloor.meta.13.name=固体 (13)
+tile.naturalFloor.meta.14.name=固体 (14)
+tile.naturalFloor.meta.15.name=固体 (15)
 tile.structureGenerator.name=结构生成器
 tile.mazeGenerator.name=迷宫生成器
 tile.spawnCommand.name=生成命令方块
@@ -49,13 +49,13 @@ tile.spawn_script.name=脚本方块
 itemGroup.structureTools=结构工具
 itemGroup.inventoryGenerators=战利品
 
-commands.rc.noEntityInfo=The sender doesn't handle structure info!
-commands.rc.noSelection=The sender doesn't handle selections!
+commands.rc.noEntityInfo=发送器（sender）不包含结构信息！
+commands.rc.noSelection=发送器没有选择！
 commands.rc.large.warn=选择范围太大了！需要花一些时间.
-commands.rc.large.error=The selection is too big! (And if it weren't, this command would probably take a few days to run!)
+commands.rc.large.error=选择范围太大了！ (如果不停下来，这个指令将执行到驴年马月！)
 
-commands.structure.notGeneric=Structure '%s' is not generic!
-commands.structure.notRegistered=No structure found by name '%s'!
+commands.structure.notGeneric=结构 '%s' 没有类型!
+commands.structure.notRegistered=找不到名称为 '%s' 的结构!
 
 commands.strucGen.noPlace=结构找不到合适的生成位置!
 commands.strucGen.canceled=结构生成被取消!
@@ -63,115 +63,115 @@ commands.strucGen.noStructure=名为 '%s' 的结构没有被注册
 
 commands.strucImport.noStructure=名为'%s'的结构没有被注册
 
-commands.selectSet.get=Selection: %s
-commands.selectSet.size=Size: %s (%s blocks)
+commands.selectSet.get=选择: %s
+commands.selectSet.size=大小: %s (%s 个方块)
 
 commands.selectModify.noSelection=玩家没有选择完全
 commands.selectModify.invalidMetadata=标签应该以 '0,1,5' 的形式输入, 但是你输入了 '%s'
 
 commands.strucReload.success=重载所有的 %s 文件
 
-commands.selectCopy.success=Copied (%s) to clipboard
+commands.selectCopy.success=已将 (%s) 复制到剪贴板
 
-commands.strucPaste.noClipboard=You have to copy an area first!
+commands.strucPaste.noClipboard=你必须首先复制一个区域!
 
-commands.rcpreview.invalid=Invalid preview type
-commands.rcpreview.success=Preview type set to '%s'
+commands.rcpreview.invalid=无效的预览类型
+commands.rcpreview.success=预览类型已设置为 '%s'
 
-commands.rc.noOperation=No currently queued operation
-commands.rc.queuedOp=Operation in preview - %s or %s
-commands.rcconfirm.run=Run the operation
-commands.rccancel.run=Cancel the operation
+commands.rc.noOperation=当前没有等待的操作
+commands.rc.queuedOp=预览状态下的操作 - %s or %s
+commands.rcconfirm.run=执行操作
+commands.rccancel.run=取消操作
 
-commands.rcreopen.run=Re-Open GUI
-commands.rcreopen.nogui=No GUI to reopen!
-commands.rcreopen.fail=Failed to reopen GUI!
-commands.rc.didhide=Hidden GUI - %s?
+commands.rcreopen.run=重开GUI
+commands.rcreopen.nogui=没有GUI可以重开!
+commands.rcreopen.fail=重开GUI失败!
+commands.rc.didhide=隐藏 - %s 吗?
 
-commands.rcimportschematic.missing=The file '%s' was not found in %s
-commands.rcimportschematic.format=The file '%s' has an unsupported format (%s)
+commands.rcimportschematic.missing=在 %s 中没有找到文件 '%s' 
+commands.rcimportschematic.format=文件 '%s' 的格式 (%s) 不受支持
 
-commands.strucExportSchematic.success=Exported schematic to %s
+commands.strucExportSchematic.success=将图表导出为 %s
 
-commands.biomedict.get=Biome Types for %s: %s
-commands.biomedict.get.number=Lookup (%s biomes)
-commands.biomedict.list=Biomes of Type %s: %s
-commands.biomedict.list.number=Lookup (%s types)
+commands.biomedict.get=找到类型为 %s 的群系: %s
+commands.biomedict.get.number=找到 (%s 个生物群系)
+commands.biomedict.list=找到类型为 %s 的群系列表: %s
+commands.biomedict.list.number=找到 (%s 个群系类型)
 
-commands.dimensiondict.get=Dimension Types for %d: %s
-commands.dimensiondict.get.number=Lookup (%s dimensions)
-commands.dimensiondict.list=Dimensions of Type %s: %s
-commands.dimensiondict.list.number=Lookup (%s types)
+commands.dimensiondict.get=获取 %d 的维度类型: %s
+commands.dimensiondict.get.number=找到 (%s 个维度)
+commands.dimensiondict.list=找到类型为 %s 的维度列表: %s
+commands.dimensiondict.list.number=找到 (%s 个维度类型)
 
-commands.rcvisual.enabled='%s' successfully enabled
-commands.rcvisual.disabled='%s' successfully disabled
+commands.rcvisual.enabled='%s' 成功启用
+commands.rcvisual.disabled='%s' 成功禁用
 
-commands.whatisthis.none=There is nothing here!
-commands.whatisthis.one=This is: %s
-commands.whatisthis.many=This is any, or all of: %s
+commands.whatisthis.none=这儿什么都没有!
+commands.whatisthis.one=这是: %s
+commands.whatisthis.many=这是 %s 的任意形式
 
-commands.rcarea.get=%s to %s
-commands.rcarea.select=Select this area
+commands.rcarea.get=%s 到 %s
+commands.rcarea.select=选择这片区域
 commands.rcpos.get=[%d,%d,%d]
 commands.rcchunkpos.get=[%d,%d]
 commands.rcpos.none=§onowhere§r
 commands.rcsize.get=[%d,%d,%d]
-commands.rccopy.suggest=Copy
+commands.rccopy.suggest=复制
 
-commands.rcsightinfo.lookup=Sight Info
-commands.rcsightinfo.unknown=Unknown sight UUID!
+commands.rcsightinfo.lookup=观察信息
+commands.rcsightinfo.unknown=未知的观察 UUID!
 commands.rcsightinfo.get=%s %s, ID: %s
-commands.rcsightinfo.structure=%s %s, Seed: %s, ID: %s
-commands.rcforget.forget=Forget %s
-commands.rcforget.success=Forgot %s!
-commands.rcforgetall.success=Forgot %s structures!
+commands.rcsightinfo.structure=%s %s, 种子: %s, ID: %s
+commands.rcforget.forget=遗忘 %s
+commands.rcforget.success=成功遗忘 %s!
+commands.rcforgetall.success=成功遗忘 %s 个结构!
 
-commands.rcremember.success=Remembered %s!
+commands.rcremember.success=成功记忆 %s!
 
-commands.rclookup.reply.silent=%s: §bInactive§r, by: %s, is %s, %s
-commands.rclookup.reply.generates=%s: §bGenerates§r, by: %s, is %s, %s
-commands.rclookup.reply.noauthor=§oUnknown§r
-commands.rclookup.reply.nolink=§oNo link provided§r
-commands.rclookup.reply.comment=Comment: %s
+commands.rclookup.reply.silent=%s: §b休眠§r, 通过: %s, 是 %s, %s
+commands.rclookup.reply.generates=%s: §b生成§r,通过: %s, 是 %s, %s
+commands.rclookup.reply.noauthor=§o未知§r
+commands.rclookup.reply.nolink=§o未提供链接§r
+commands.rclookup.reply.comment=备注: %s
 
-commands.rclist.previous=Previous Page
-commands.rclist.next=Next Page
-commands.rclist.none=No Structures
+commands.rclist.previous=上一页
+commands.rclist.next=下一页
+commands.rclist.none=没有结构
 
-commands.rcsearch.empty=No results!
-commands.rcsearch.lookup=Look Up
+commands.rcsearch.empty=没有结果!
+commands.rcsearch.lookup=寻找
 
-commands.rcdecorateone.none=No suitable structures found!
-commands.rcretro.count=Retro-Generated %s chunks!
+commands.rcdecorateone.none=未找到合适的结构!
+commands.rcretro.count=重新生成 %s 个区块!
 
-commands.rcsave.noregistry=No such registry id!
-commands.rcsave.nodirectory=No such directory id!
-commands.rcsaveall.result=Saved %s elements to %s. %s failed.
-commands.rcmap.nonvirtual=Cannot map with this command!
-commands.rcmap.nonvirtual.arguments=Cannot map with these command arguments!
-commands.rcmapall.result=Saved %s elements to %s. %s failed. %s skipped.
+commands.rcsave.noregistry=该id没有注册!
+commands.rcsave.nodirectory=没有该id表示的文件夹!
+commands.rcsaveall.result=将 %s 要素保存到 %s. %s 保存失败.
+commands.rcmap.nonvirtual=不能匹配到这条指令!
+commands.rcmap.nonvirtual.arguments=不能匹配到这些指令参数!
+commands.rcmapall.result=将 %s 要素保存到 %s. %s 保存失败. %s 已跳过.
 
-commands.rceval.result.true=True
-commands.rceval.result.false=False
+commands.rceval.result.true=是
+commands.rceval.result.false=否
 
 inventoryGen.vanilla=原版战利品表
 inventoryGen.custom=自定义战利品表
 inventoryGen.create=创建新战利品表
 inventoryGen.none=无战利品表
 inventoryGen.mod=模组战利品表
-inventoryGen.active=%sActive%s
-inventoryGen.inactive=%sInactive%s
+inventoryGen.active=%s激活%s
+inventoryGen.inactive=%s休眠%s
 
-reccomplex.server.status=<Recurrent Complex> Loaded %s active structures: %s %s %s %s
+reccomplex.server.status=<Recurrent Complex> 加载了 %s 个激活的结构: %s %s %s %s
 
-reccomplex.save.permission=You do not have permission to save!
-reccomplex.save.failure=Failed to save %s to %s
+reccomplex.save.permission=你没有权限保存!
+reccomplex.save.failure=将 %s 保存到 %s 失败
 reccomplex.save.full=%s: %s
-reccomplex.save.success=Saved %s to %s
-reccomplex.save.submit=[Submit]
-reccomplex.save.submit.hover=Submit to Repository
-reccomplex.delete.failure=Failed to delete %s from %s
-reccomplex.delete.success=Deleted %s from %s
+reccomplex.save.success=将 %s 保存到 %s
+reccomplex.save.submit=[提交]
+reccomplex.save.submit.hover=提交到库
+reccomplex.delete.failure=删除 %s 失败从 %s
+reccomplex.delete.success=删除 %s 从 %s
 
 reccomplex.configgui.title=建筑生成配置界面
 reccomplex.configgui.ctgy.general=全局
@@ -205,15 +205,15 @@ reccomplex.structure.blocking.false=§7非阻塞§r
 reccomplex.structure.blocking.tooltip=决定该结构是否会阻止<br>其他结构生成在相同的地方。
 reccomplex.structure.randomrange=在两个值之间随机取值。
 
-reccomplex.structure.variables=Local Toggles
-reccomplex.structure.variables.tooltip=Toggles specific to the structure<br>that can be used in environment<br>expressions everywhere within the<br> structure.
-reccomplex.structure.variables.id=Identifier
-reccomplex.structure.variables.id.tooltip=Unique Identifier of the toggle<br>(what is used in the expressions)
+reccomplex.structure.variables=本地切换
+reccomplex.structure.variables.tooltip=该切换键专用于<br>环境表达式中<br>所有出现这一<br> 结构的地方.
+reccomplex.structure.variables.id=标识符
+reccomplex.structure.variables.id.tooltip=切换键的独有标识符<br>(用在表达式中)
 reccomplex.structure.variables.chance=Chance
 reccomplex.structure.variables.chance.tooltip=Chance for the toggle to trigger (-> true)
-reccomplex.structure.variables.logical=Logical
-reccomplex.structure.variables.logical.tooltip=True if the toggle affects placement logic<br>(e.g. maze exits).<br>False if it's purely visual.
-reccomplex.structure.variables.condition=Condition
+reccomplex.structure.variables.logical=逻辑
+reccomplex.structure.variables.logical.tooltip=如果切换键影响到了放置逻辑则为是<br>(e.g. maze exits).<br>如果完全可见即为否.
+reccomplex.structure.variables.condition=状态
 
 reccomplex.structure.id=Structure ID
 reccomplex.structure.id.tooltip=Unique Identifier for the structure.
